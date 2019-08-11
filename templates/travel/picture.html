@@ -1,0 +1,180 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <style>
+       body{
+         margin:0px;
+         padding:0px;
+         overflow-x:hidden;
+       }
+      .menu{
+        min-height:568px;
+        background-color:#8DACDF;
+        opacity:0.8;
+        box-shadow:-2px 0px 2px 0px #5DA3CE,
+                   2px 0px 2px 0px #5DA3CE,
+                   0px -2px 2px 0px #5DA3CE,
+                   0px 2px 2px 0px #5DA3CE;
+      }
+      .menu-item{
+        width:150px;
+        height:40px;
+        background-color:#7EE6E6;
+        opacity:0.8;
+        margin-left:10px;
+        margin-bottom:5px;
+      }
+      .menu-default{
+        width:150px;
+        height:40px;
+        margin-left:10px;
+        margin-bottom:5px;
+      }
+      .menu-item a{
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:#068CE8;
+        line-height:40px;
+        padding:0px 40px;
+      }
+      .menu-default a {
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:#fff;
+        line-height:40px;
+        padding:0px 40px;
+      }
+      .list-item{
+        border:1px solid #fff;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      }
+      .item{
+        min-width:400px;
+        text-align:center;
+        padding:3px 0px;
+      }
+      .item p{
+        margin:0px;
+        font-family:"微软雅黑";
+        font-size:14px;
+        color:#F8F8F9;
+      }
+      .item-menu{
+        display:flex;
+        flex-direction:row;
+        border:1px solid #C14E4E;
+        height:40px;
+        border-radius:10px;
+        justify-content:center;
+        width:200px;
+        margin:0px auto;
+        margin-top:3px;
+      }
+      .item-menu a,span{
+        font-family:"微软雅黑";
+        font-size:16px;
+        color:#F60707;
+        line-height:40px;
+      }
+      .item-menu .love{
+        margin-left:10px;
+        margin-right:10px;
+      }
+  </style>
+{% endblock %}
+{% block main %}
+  <div id="app">
+      <el-row :gutter="15">
+          <el-col :span="3">
+              <div class="menu">
+                  <div class="menu-item">
+                      <a>民族舞蹈</a>
+                  </div>
+                  <div class="menu-default">
+                      <a>彝家新年</a>
+                  </div>
+                  <div class="menu-default">
+                      <a>落日余晖</a>
+                  </div>
+                  <div class="menu-default">
+                      <a>小桥流水</a>
+                  </div>
+                  <div class="menu-default">
+                      <a>民族舞蹈</a>
+                  </div>
+              </div>
+          </el-col>
+          <el-col :span="21">
+             <div class="list-item">
+                 <div class="item">
+                     <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+                     <div class="item-menu">
+                         <a>详情</a>
+                         <div class="love"><a>喜欢</a><span>20</span></div>
+                         <div class="comment"><a>评论</a><span>100</span></div>
+                     </div>
+                     <div style="border-top: #fff 1px dashed; overflow: hidden;height:1px;margin-top:2px;"></div>
+                 </div>
+                 <div class="item">
+                     <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+                     <div class="item-menu">
+                         <a>详情</a>
+                         <div class="love"><a>喜欢</a><span>20</span></div>
+                         <div class="comment"><a>评论</a><span>100</span></div>
+                     </div>
+                     <div style="border-top: #fff 1px dashed; overflow: hidden;height:1px;margin-top:2px;"></div>
+                 </div>
+                 <div class="item">
+                     <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+                     <div class="item-menu">
+                         <a>详情</a>
+                         <div class="love"><a>喜欢</a><span>20</span></div>
+                         <div class="comment"><a>评论</a><span>100</span></div>
+                     </div>
+                     <div style="border-top: #fff 1px dashed; overflow: hidden;height:1px;margin-top:2px;"></div>
+                 </div>
+             </div>
+          </el-col>
+      </el-row>
+  </div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/vue.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+   <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return {
+          visible: false,
+          radio:'1',
+          input:'',
+        }
+      }
+    })
+  </script>
+{% endblock %}

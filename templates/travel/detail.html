@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+ <style>
+     .main{
+       text-align:center;
+     }
+ </style>
+{% endblock %}
+{% block main%}
+  <div id="app">
+     <el-row>
+         <el-col>
+             <div class="main">
+                  <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+                  <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+                  <img src="{% static 'img/upload/yizu1.jpg'%}">
+                     <p>凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。<br>
+                         彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。 <br>
+                         彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                         彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡； <br>
+                         大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；
+                         <br>彝家“背新娘”、摩梭人“阿注”婚姻别有情趣
+                     </p>
+             </div>
+         </el-col>
+     </el-row>
+ </div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/vue.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+   <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return {
+          visible: false,
+          radio:'1',
+          input:'',
+        }
+      }
+    })
+  </script>
+{% endblock %}

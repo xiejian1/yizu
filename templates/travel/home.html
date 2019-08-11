@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+  <style>
+  .el-radio__label{
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  .el-input__inner{
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 350px;
+  }
+  .el-input{
+    margin-top:3px;
+  }
+  .main-left{
+    background-color:#E0E2E6;
+    border:1px solid #63C2E3;
+    margin:2px 5px;
+  }
+  .content p{
+    margin:0px;
+    color:#D0DAF1;
+    font-family:"微软雅黑";
+    font-size:14px;
+  }
+  .content{
+    margin:2px 0px;
+    padding-right:5px;
+    padding-left:8px;
+  }
+  .content img{
+    padding-top:3px;
+    width:180px;
+  }
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+  .category-top{
+    min-height:350px;
+    background-color:#E4E7EC;
+    /*border:1px solid #63C2E3;*/
+  }
+  .carousel{
+    background-color:#E0E2E6;
+  }
+  .category-bg {
+     background-color:#7CA4E6;
+     border:1px solid #63C2E3;
+     margin-right:2px;
+  }
+  .journey-list{
+     background-color:#7CA4E6;
+     border:1px solid #63C2E3;
+     min-height:365px;
+     margin:0px 3px;
+  }
+  .yijia-top{
+    display:flex;
+    border:1px solid #ffffff;
+    justify-content:space-between;
+  }
+  .yijia-content{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    border:1px solid #ffffff;
+    min-height:123px;
+  }
+  .yijia-top p{
+    margin:0px;
+    padding:14px 0px 14px 15px;
+    font-family:"微软雅黑";
+    font-size:16px;
+    color:#D0DAF1;
+  }
+  .read-more{
+    padding:14px 0px;
+    padding-right:15px;
+    font-family:"微软雅黑";
+    font-size:16px;
+    color:#D0DAF1;
+  }
+  .scenery-list{
+    padding-top:5px;
+  }
+  .scenery{
+    height:35px;
+    border-bottom:1px dashed #FAF8F8;
+  }
+  .scenery a{
+    font-family:"微软雅黑";
+    font-size:16px;
+    color:#D0DAF1;
+    padding-left:18px;
+    /*padding:10px 0px 10px 18px;*/
+    line-height:35px;
+  }
+  .yijia-food{
+    padding:3px 3px;
+  }
+  </style>
+{% endblock %}
+
+{% block main %}
+<div id="app">
+    <el-row>
+        <el-col :span="14">
+            <div class="carousel">
+                <div class="main-left">
+                  <template>
+                      <el-carousel height="250px">
+                          <el-carousel-item>
+                            <img src="{% static 'img/xichang.jpg' %}">
+                          </el-carousel-item>
+                          <el-carousel-item >
+                            <img src="{% static 'img/xichang1.jpg' %}">
+                          </el-carousel-item>
+                          <el-carousel-item >
+                            <img src="{% static 'img/xichang2.jpg' %}">
+                          </el-carousel-item>
+                          <el-carousel-item >
+                            <img src="{% static 'img/xichang3.jpg' %}">
+                          </el-carousel-item>
+                      </el-carousel>
+                  </template>
+                </div>
+            </div>
+        </el-col>
+        <el-col :span="10">
+            <div class="content">
+                <p>
+                    凉山是一个多民族地区， 各民族历史悠久， 风情古朴动人。
+                    <img src="{% static 'img/yizu.jpg' %}" style="float:right;"><br>
+                    彝族、藏族、回族、布依族、僳僳族等 10多个世居民族的生活习俗丰富多彩。<br>
+                    彝家的“砣砣肉”、“杆杆酒”，藏族的酥油茶， 摩梭人的“苏里玛酒”别有风味；<br>
+                    彝族“火把节”、 回族“古尔邦节”、僳僳族“牛王会”、 布依族“六月六”热闹非凡；<br>
+                    大凉山地区的“毕摩文化” 充满魔幻色彩，彝族服饰、歌舞美轮美奂；<br>
+                    彝家“背新娘”、摩梭人“阿注”婚姻别有情趣</p>
+            </div>
+        </el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="16">
+             <div class="category-top">
+                 <div class="category-bg">
+                     <div class="yijia">
+                         <div class="yijia-top">
+                             <p>彝家分光</p>
+                             <div class="read-more">
+                                 &gt;&gt; <a>more</a>
+                             </div>
+                         </div>
+                         <div class="yijia-content">
+                             <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/food/food.jpg' %}">
+                                 </a>
+                             </div>
+                             <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/food/food.jpg' %}">
+                                 </a>
+                             </div>
+                             <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/food/food.jpg' %}">
+                                 </a>
+                             </div>
+                             <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/food/food.jpg' %}">
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="yijia">
+                         <div class="yijia-top">
+                             <p>彝家美食</p>
+                             <div class="read-more">
+                                 &gt;&gt; <a>more</a>
+                             </div>
+                         </div>
+                         <div class="yijia-content">
+                             <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/sightseeing/sceny.jpg' %}">
+                                 </a>
+                             </div>
+                              <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/sightseeing/sceny.jpg' %}">
+                                 </a>
+                             </div>
+                              <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/sightseeing/sceny.jpg' %}">
+                                 </a>
+                             </div>
+                              <div class="yijia-food">
+                                 <a>
+                                     <img src="{% static 'img/sightseeing/sceny.jpg' %}">
+                                 </a>
+                             </div>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+        </el-col>
+        <el-col :span="8">
+            <div class="category-top">
+                 <div class="journey-list">
+                     <div class="yijia-top">
+                         <p>景区列表</p>
+                         <div class="read-more">
+                             &gt;&gt; <a>more</a>
+                         </div>
+                     </div>
+                     <div class="scenery-list">
+                         <div class="scenery">
+                             <a>邛海湿地</a>
+                         </div>
+                         <div class="scenery">
+                             <a>庐山景区</a>
+                         </div>
+                         <div class="scenery">
+                             <a>螺髻山溶洞</a>
+                         </div>
+                         <div class="scenery">
+                             <a>灵山寺求缘</a>
+                         </div>
+                         <div class="scenery">
+                             <a>彝海结盟</a>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </el-col>
+    </el-row>
+</div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/vue.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+   <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return {
+          visible: false,
+          radio:'1',
+          input:'',
+        }
+      }
+    })
+  </script>
+{% endblock %}
